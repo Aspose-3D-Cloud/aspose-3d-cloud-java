@@ -33,9 +33,7 @@ All Aspose.3D Cloud SDKs are licensed under [MIT License](https://github.com/asp
 
 # How to use the SDK?
 
-# Tests
-
-[Tests](https://github.com/aspose-3D-cloud/aspose-3D-cloud-java/tree/master/Aspose.3D.Cloud.SDK.Test) contain various examples of using the SDK.
+[Tests](https://github.com/Aspose-3D-Cloud/aspose-3D-cloud-java/tree/master/src/test/java/com/aspose/cloud/threed/api) contain various examples of using the SDK.
 
 
 
