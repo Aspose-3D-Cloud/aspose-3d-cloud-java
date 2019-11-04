@@ -33,6 +33,61 @@ All Aspose.3D Cloud SDKs are licensed under [MIT License](https://github.com/asp
 
 # How to use the SDK?
 
+## Installation & Usage
+
+ 
+
+Add this dependency to your project's POM:
+
+
+```
+<repositories>
+    <repository>
+        <id>AsposeJavaAPI</id>
+        <name>Aspose Java API</name>
+        <url>https://repository.aspose.cloud/repo/</url>
+    </repository>
+</repositories>
+
+<dependencies>
+    <dependency>
+        <groupId>com.aspose</groupId>
+        <artifactId>aspose-3d-cloud</artifactId>
+        <version>19.11</version>
+    </dependency>
+</dependencies>
+```
+
+## Getting Started
+
+ 
+
+```
+import com.aspose.cloud.threed.api.ThreeDCloudApi;
+import com.aspose.cloud.threed.client.ApiException;
+import com.aspose.cloud.threed.client.ApiResponse;
+
+public class App 
+{
+	private static String grantType = "client_credentials"; 
+	private static String clientId = "****yourAppid****";
+	private static String clientSecret = "****yourAppKey****";
+
+    public static void main( String[] args ) throws ApiException
+    {
+	
+    	  ThreeDCloudApi threeDCloudApi = new ThreeDCloudApi(grantType,clientId,clientSecret);
+        String srcPath = "3DTest\\Aspose.pdf";
+        String destPath = "3DTest\\Aspose.javaNew2.pdf";
+        String srcStorageName = null;
+        String destStorageName = null;
+        String versionId = null;
+        ApiResponse<Void> response = threeDCloudApi.copyFileWithHttpInfo(srcPath, destPath, srcStorageName, destStorageName, versionId);
+        ```
+    }
+}
+```
+
 [Tests](https://github.com/Aspose-3D-Cloud/aspose-3D-cloud-java/tree/master/src/test/java/com/aspose/cloud/threed/api) contain various examples of using the SDK.
 
 
