@@ -69,21 +69,20 @@ import com.aspose.cloud.threed.client.ApiResponse;
 
 public class App 
 {
-		private static String grantType = "client_credentials"; 
-		private static String clientId = "****yourAppid****";
-		private static String clientSecret = "****yourAppKey****";
-    public static void main( String[] args ) throws ApiException
-    {
-	
-				ThreeDCloudApi threeDCloudApi = new ThreeDCloudApi(grantType,clientId,clientSecret);
-				String srcPath = "3DTest\\Aspose.pdf";
-				String destPath = "3DTest\\Aspose.javaNew2.pdf";
-				String srcStorageName = null;
-				String destStorageName = null;
-				String versionId = null;
-				ApiResponse<Void> response = threeDCloudApi.copyFileWithHttpInfo(srcPath, destPath, srcStorageName, destStorageName, versionId);
-				```
-    }
+	private static String grantType = "client_credentials"; 
+	private static String clientId = "****yourAppid****";
+	private static String clientSecret = "****yourAppKey****";
+	public static void main( String[] args ) throws ApiException
+	{
+		ThreeDCloudApi threeDCloudApi = new ThreeDCloudApi(grantType,clientId,clientSecret);
+		String srcPath = "3DTest\\Aspose.pdf";
+		String destPath = "3DTest\\Aspose.javaNew2.pdf";
+		String srcStorageName = null;
+		String destStorageName = null;
+		String versionId = null;
+		ApiResponse<Void> response = threeDCloudApi.copyFileWithHttpInfo(srcPath, destPath, srcStorageName, destStorageName, versionId);
+		```
+	}
 }
 ```
 
