@@ -29,7 +29,7 @@ It gives you an ability to:
 
 # Licensing
 
-All Aspose.3D Cloud SDKs are licensed under [MIT License](https://github.com/aspose-3d-cloud/aspose-3d-cloud-dotnet/blob/master/LICENSE).
+All Aspose.3D Cloud SDKs are licensed under [MIT License](https://github.com/aspose-3d-cloud/aspose-3d-cloud-java/blob/master/LICENSE).
 
 # How to use the SDK?
 
@@ -76,7 +76,7 @@ public class App
 	{
 		ThreeDCloudApi threeDCloudApi = new ThreeDCloudApi(grantType,clientId,clientSecret);
 		String srcPath = "3DTest\\Aspose.pdf";
-		String destPath = "3DTest\\Aspose.javaNew2.pdf";
+		String destPath = "3DTest\\Aspose.java.pdf";
 		String srcStorageName = null;
 		String destStorageName = null;
 		String versionId = null;
