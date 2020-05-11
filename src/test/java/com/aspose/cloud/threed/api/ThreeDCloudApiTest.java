@@ -21,8 +21,6 @@ import com.aspose.cloud.threed.client.Configuration;
 import com.aspose.cloud.threed.model.AccessTokenResponse;
 import com.aspose.cloud.threed.model.DiscUsage;
 import com.aspose.cloud.threed.model.Entity;
-import com.aspose.cloud.threed.model.FileSystem;
-import com.aspose.cloud.threed.model.FileSystemType;
 
 import java.io.File;
 import com.aspose.cloud.threed.model.FileVersions;
@@ -30,7 +28,7 @@ import com.aspose.cloud.threed.model.FilesList;
 import com.aspose.cloud.threed.model.FilesUploadResult;
 import com.aspose.cloud.threed.model.ModelData;
 import com.aspose.cloud.threed.model.ObjectExist;
-import com.aspose.cloud.threed.model.PlySaveOption;
+import com.aspose.cloud.threed.model.HTMLSaveOption;
 import com.aspose.cloud.threed.model.SaveFormat;
 import com.aspose.cloud.threed.model.SaveOptions;
 import com.aspose.cloud.threed.model.StorageExist;
@@ -56,8 +54,14 @@ import java.util.stream.Stream;
 //@Ignore
 public class ThreeDCloudApiTest extends ThreeDBaseTest{
 
-    //private final ThreeDCloudApi api = new ThreeDCloudApi();
-    
+	private ThreeDCloudApi threeDCloudApi = GetThreeDCloudApi();  
+	
+	public ThreeDCloudApiTest() throws ApiException {
+		super();
+
+	}
+	
+	
     /**
      * Copy file Test 
      * @throws ApiException if the Api call fails
@@ -119,7 +123,7 @@ public class ThreeDCloudApiTest extends ThreeDBaseTest{
      */
     @Test
     public void deleteFolderTest() throws ApiException {
-        String path ="3DTestJava2";
+        String path ="3DTestJava";
         String storageName = null;
         Boolean recursive = true;
         ApiResponse<Void> response = threeDCloudApi.deleteFolderWithHttpInfo(path, storageName, recursive);
@@ -133,7 +137,7 @@ public class ThreeDCloudApiTest extends ThreeDBaseTest{
     @Test
     public void deleteNodesTest() throws ApiException {
     	
-    	String name = "oapTest.pdf";
+    	String name = "oaptest.pdf";
     	String objectaddressingpath = "//*[(@Type = 'Camera') or (@Name = 'light')]";
     	String folder = "3DTest";
     	String storageName = "First Storage";
@@ -147,7 +151,7 @@ public class ThreeDCloudApiTest extends ThreeDBaseTest{
      */
     @Test
     public void downloadFileTest() throws ApiException {
-        String path = "3DTest/Aspose.pdf";
+        String path = "3DTest\\Aspose.pdf";
         String storageName = null;
         String versionId = null;
         File response = threeDCloudApi.downloadFile(path, storageName, versionId);
@@ -172,7 +176,7 @@ public class ThreeDCloudApiTest extends ThreeDBaseTest{
     @Test
     public void getFileVersionsTest() throws ApiException {
  
-        String path = "3DTest/Aspose.pdf";
+        String path = "3DTest\\Aspose.pdf";
         String storageName = null;
         ApiResponse<FileVersions> response = threeDCloudApi.getFileVersionsWithHttpInfo(path, storageName);
         Assert.assertEquals(response.getStatusCode(),200);
@@ -196,8 +200,8 @@ public class ThreeDCloudApiTest extends ThreeDBaseTest{
      */
     @Test
     public void moveFileTest() throws ApiException {
-        String srcPath = "3DTest/Aspose.pdf";
-        String destPath = "3DTestDest/Aspose.pdf";
+        String srcPath = "3DTest\\Aspose.java.pdf";
+        String destPath = "3DTestDest\\Aspose.pdf";
         String srcStorageName = null;
         String destStorageName = null;
         String versionId = null;
@@ -211,8 +215,8 @@ public class ThreeDCloudApiTest extends ThreeDBaseTest{
      */
     @Test
     public void moveFolderTest() throws ApiException {
-        String srcPath = null;
-        String destPath = null;
+        String srcPath = "3DTestJava";
+        String destPath = "3DTestJava2";
         String srcStorageName = null;
         String destStorageName = null;
         ApiResponse<Void> response = threeDCloudApi.moveFolderWithHttpInfo(srcPath, destPath, srcStorageName, destStorageName);
@@ -229,7 +233,7 @@ public class ThreeDCloudApiTest extends ThreeDBaseTest{
         String clientId = "threed.cloud";
         String clientSecret = "threed.cloud";;
         /*specially handling*/
-        threeDCloudApi.getApiClient().setBasePath("https://api-qa.aspose.cloud/");
+        threeDCloudApi.getApiClient().setBasePath("https://api.aspose.cloud/");
         /*specially handling end*/
         ApiResponse<AccessTokenResponse> response = threeDCloudApi.oAuthPostWithHttpInfo(grantType, clientId, clientSecret);
         Assert.assertEquals(response.getStatusCode(),200);
@@ -241,7 +245,7 @@ public class ThreeDCloudApiTest extends ThreeDBaseTest{
      */
     @Test
     public void objectExistsTest() throws ApiException {
-        String path = "3DTest/Aspose.pdf";
+        String path = "3DTest\\Aspose.pdf";
         String storageName = null;
         String versionId = null;
         ApiResponse<ObjectExist> response = threeDCloudApi.objectExistsWithHttpInfo(path, storageName, versionId);
@@ -254,7 +258,7 @@ public class ThreeDCloudApiTest extends ThreeDBaseTest{
      */
     @Test
     public void postConvertByFormatTest() throws ApiException {
-        String name = "src";
+        String name = "Aspose.pdf";
         String newformat = "pdf";
         String newfilename = "saveasformat.pdf";;
         String folder = "3DTest";
@@ -270,14 +274,14 @@ public class ThreeDCloudApiTest extends ThreeDBaseTest{
      */
     @Test
     public void postConvertByOptTest() throws ApiException {
-        String name =  "src";
-        PlySaveOption saveopt = new PlySaveOption();       
-        saveopt.setSaveFormat(SaveFormat.NUMBER_8);
-        FileSystem fs = new FileSystem();       
-        saveopt.setFileSystem(fs);
-        fs.setFileSystemType(FileSystemType.NUMBER_0);
-        List<String> positionComponents  = Arrays.asList("y","x","z");
-        saveopt.setPositionComponents(positionComponents);      
+        String name =  "Aspose.pdf";
+        HTMLSaveOption saveopt = new HTMLSaveOption();       
+        saveopt.setSaveFormat(SaveFormat.HTML);
+        //FileSystem fs = new FileSystem();       
+        //saveopt.setFileSystem(fs);
+        //fs.setFileSystemType(FileSystemType.NUMBER_0);
+        //List<String> positionComponents  = Arrays.asList("y","x","z");
+        //saveopt.setPositionComponents(positionComponents);      
         String newfilename = "saveasOptS.pdf";
         String folder =  "3DTest";
         Boolean isOverwrite = true;
@@ -421,7 +425,7 @@ public class ThreeDCloudApiTest extends ThreeDBaseTest{
     @Test
     public void uploadFileTest() throws ApiException {
         File file = new File(ThreeDBaseTest.GetSourceFolder());
-        String path  = "3DTestDest/AsposeUpload_Java.pdf";;
+        String path  = "3DTestDest\\AsposeUpload_Java.pdf";;
         String storageName = null;                       
         ApiResponse<FilesUploadResult> response = threeDCloudApi.uploadFileWithHttpInfo(path, file, storageName);
         Assert.assertEquals(response.getStatusCode(),200);

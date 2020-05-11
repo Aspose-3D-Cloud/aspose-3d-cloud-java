@@ -14,7 +14,6 @@
 package com.aspose.cloud.threed.model;
 
 import java.util.Objects;
-import com.aspose.cloud.threed.model.FileSystem;
 import com.aspose.cloud.threed.model.SaveFormat;
 import com.aspose.cloud.threed.model.SaveOptions;
 import com.google.gson.TypeAdapter;
@@ -30,7 +29,7 @@ import java.util.List;
 /**
  * Discreet3DSSaveOption
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-08-14T15:01:31.292+08:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-09T10:19:53.827+08:00")
 public class Discreet3DSSaveOption extends SaveOptions {
   @SerializedName("ExportLight")
   private Boolean exportLight = null;
@@ -69,7 +68,7 @@ public class Discreet3DSSaveOption extends SaveOptions {
    * @return exportLight
   **/
   @ApiModelProperty(value = "Gets or sets whether export all lights in the scene.")
-  public Boolean isExportLight() {
+  public Boolean ExportLight() {
     return exportLight;
   }
 
@@ -87,7 +86,7 @@ public class Discreet3DSSaveOption extends SaveOptions {
    * @return exportCamera
   **/
   @ApiModelProperty(value = "Gets or sets whether export all cameras in the scene")
-  public Boolean isExportCamera() {
+  public Boolean ExportCamera() {
     return exportCamera;
   }
 
@@ -177,7 +176,7 @@ public class Discreet3DSSaveOption extends SaveOptions {
    * @return gammaCorrectedColor
   **/
   @ApiModelProperty(value = "Gets or sets the GammaCorrectedColor.")
-  public Boolean isGammaCorrectedColor() {
+  public Boolean GammaCorrectedColor() {
     return gammaCorrectedColor;
   }
 
@@ -195,7 +194,7 @@ public class Discreet3DSSaveOption extends SaveOptions {
    * @return flipCoordinateSystem
   **/
   @ApiModelProperty(value = "Gets or sets flip coordinate system of control points/normal during importing/exporting..")
-  public Boolean isFlipCoordinateSystem() {
+  public Boolean FlipCoordinateSystem() {
     return flipCoordinateSystem;
   }
 
@@ -213,7 +212,7 @@ public class Discreet3DSSaveOption extends SaveOptions {
    * @return highPreciseColor
   **/
   @ApiModelProperty(value = "Gets or sets the HighPreciseColor.")
-  public Boolean isHighPreciseColor() {
+  public Boolean HighPreciseColor() {
     return highPreciseColor;
   }
 

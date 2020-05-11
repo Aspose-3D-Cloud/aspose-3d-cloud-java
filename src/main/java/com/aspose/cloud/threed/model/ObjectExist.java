@@ -27,7 +27,7 @@ import java.io.IOException;
  * Object exists
  */
 @ApiModel(description = "Object exists")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-08-14T15:01:31.292+08:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-09T10:19:53.827+08:00")
 public class ObjectExist {
   @SerializedName("Exists")
   private Boolean exists = null;
@@ -45,7 +45,7 @@ public class ObjectExist {
    * @return exists
   **/
   @ApiModelProperty(required = true, value = "Indicates that the file or folder exists.")
-  public Boolean isExists() {
+  public Boolean Exists() {
     return exists;
   }
 
@@ -63,7 +63,7 @@ public class ObjectExist {
    * @return isFolder
   **/
   @ApiModelProperty(required = true, value = "True if it is a folder, false if it is a file.")
-  public Boolean isIsFolder() {
+  public Boolean IsFolder() {
     return isFolder;
   }
 

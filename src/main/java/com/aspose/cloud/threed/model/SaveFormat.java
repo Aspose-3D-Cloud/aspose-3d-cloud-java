@@ -29,30 +29,45 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(SaveFormat.Adapter.class)
 public enum SaveFormat {
   
-  //AMF
-  NUMBER_0(0),
-  //Collada
-  NUMBER_1(1),
-  //Discreet3DS
-  NUMBER_2(2),
-  //Draco
-  NUMBER_3(3),
-  //FBX
-  NUMBER_4(4),
-  //GLTF
-  NUMBER_5(5),
-  //Obj
-  NUMBER_6(6),
-  //PDF
-  NUMBER_7(7),
-  //PLY
-  NUMBER_8(8),
-  //Rvm
-  NUMBER_9(9),
-  //STL
-  NUMBER_10(10),
-  //U3D
-  NUMBER_11(11);
+  AMF(0),
+  
+  ASE(1),
+  
+  Aspose3DWeb(2),
+  
+  Collada(3),
+  
+  Discreet3DS(4),
+  
+  Draco(5),
+  
+  DXF(6),
+  
+  FBX(7),
+  
+  GLTF(8),
+  
+  HTML(9),
+  
+  JT(10),
+  
+  Microsoft3MF(11),
+  
+  Obj(12),
+  
+  PDF(13),
+  
+  PLY(14),
+  
+  Rvm(15),
+  
+  STL(16),
+  
+  U3D(17),
+  
+  VRML(18),
+  
+  X(19);
 
   private Integer value;
 

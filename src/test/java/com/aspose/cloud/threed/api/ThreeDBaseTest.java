@@ -10,8 +10,8 @@ public class ThreeDBaseTest {
    
 	private static String accesstoken;
 	private static String grantType = "client_credentials";
-	private static String clientId =  "****yourAppid****";
-	private static String clientSecret =  "****yourAppKey****";
+	private static String clientId = "*****your AppID*****";
+	private static String clientSecret = "*****your AppKey*****";
 	private static String sourceFolder ="E:\\Cloud\\src\\java\\testData\\Aspose.pdf";
 	public static String GetSourceFolder() {
 		return sourceFolder;
@@ -28,7 +28,13 @@ public class ThreeDBaseTest {
 		return clientSecret;
 	}
 
- 
+	protected ThreeDCloudApi GetThreeDCloudApi() throws ApiException {
+		if (threeDCloudApi == null) {
+			threeDCloudApi = new ThreeDCloudApi(grantType, clientId, clientSecret);
+		}
+		return threeDCloudApi;
+	}
+/*	
     public ThreeDBaseTest()
     {
     	threeDCloudApi = new ThreeDCloudApi(); 
@@ -64,4 +70,5 @@ public class ThreeDBaseTest {
 		apiTask.setApiClient(apiClient);
 		return apiClient;
 	}
+	*/
 }

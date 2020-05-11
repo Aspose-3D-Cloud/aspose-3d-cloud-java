@@ -29,9 +29,9 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(ColladaTransformStyle.Adapter.class)
 public enum ColladaTransformStyle {
   
-  NUMBER_0(0),
+  Components(0),
   
-  NUMBER_1(1);
+  Matrix(1);
 
   private Integer value;
 

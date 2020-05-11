@@ -15,7 +15,6 @@ package com.aspose.cloud.threed.model;
 
 import java.util.Objects;
 import com.aspose.cloud.threed.model.FileContentType;
-import com.aspose.cloud.threed.model.FileSystem;
 import com.aspose.cloud.threed.model.SaveFormat;
 import com.aspose.cloud.threed.model.SaveOptions;
 import com.google.gson.TypeAdapter;
@@ -31,7 +30,7 @@ import java.util.List;
 /**
  * STLSaveOption
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-08-14T15:01:31.292+08:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-09T10:19:53.827+08:00")
 public class STLSaveOption extends SaveOptions {
   @SerializedName("FlipCoordinateSystem")
   private Boolean flipCoordinateSystem = null;
@@ -49,7 +48,7 @@ public class STLSaveOption extends SaveOptions {
    * @return flipCoordinateSystem
   **/
   @ApiModelProperty(value = "Gets or sets whether flip coordinate system of control points/normal during exporting.")
-  public Boolean isFlipCoordinateSystem() {
+  public Boolean FlipCoordinateSystem() {
     return flipCoordinateSystem;
   }
 

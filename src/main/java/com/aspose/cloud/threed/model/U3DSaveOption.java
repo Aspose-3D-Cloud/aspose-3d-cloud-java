@@ -14,7 +14,6 @@
 package com.aspose.cloud.threed.model;
 
 import java.util.Objects;
-import com.aspose.cloud.threed.model.FileSystem;
 import com.aspose.cloud.threed.model.SaveFormat;
 import com.aspose.cloud.threed.model.SaveOptions;
 import com.google.gson.TypeAdapter;
@@ -30,7 +29,7 @@ import java.util.List;
 /**
  * U3DSaveOption
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-08-14T15:01:31.292+08:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-09T10:19:53.827+08:00")
 public class U3DSaveOption extends SaveOptions {
   @SerializedName("FlipCoordinateSystem")
   private Boolean flipCoordinateSystem = null;
@@ -60,7 +59,7 @@ public class U3DSaveOption extends SaveOptions {
    * @return flipCoordinateSystem
   **/
   @ApiModelProperty(value = "Gets or sets whether flip coordinate system of control points/normal during importing/exporting.")
-  public Boolean isFlipCoordinateSystem() {
+  public Boolean FlipCoordinateSystem() {
     return flipCoordinateSystem;
   }
 
@@ -78,7 +77,7 @@ public class U3DSaveOption extends SaveOptions {
    * @return meshCompression
   **/
   @ApiModelProperty(value = "Gets or sets whether to enable mesh data compression.")
-  public Boolean isMeshCompression() {
+  public Boolean MeshCompression() {
     return meshCompression;
   }
 
@@ -96,7 +95,7 @@ public class U3DSaveOption extends SaveOptions {
    * @return exportNormals
   **/
   @ApiModelProperty(value = "Gets or sets whether to export normal data.")
-  public Boolean isExportNormals() {
+  public Boolean ExportNormals() {
     return exportNormals;
   }
 
@@ -114,7 +113,7 @@ public class U3DSaveOption extends SaveOptions {
    * @return exportTextureCoordinates
   **/
   @ApiModelProperty(value = "Gets or sets whether to export texture coordinates.")
-  public Boolean isExportTextureCoordinates() {
+  public Boolean ExportTextureCoordinates() {
     return exportTextureCoordinates;
   }
 
@@ -132,7 +131,7 @@ public class U3DSaveOption extends SaveOptions {
    * @return exportVertexDiffuse
   **/
   @ApiModelProperty(value = "Gets or sets whether to export vertex's diffuse color.")
-  public Boolean isExportVertexDiffuse() {
+  public Boolean ExportVertexDiffuse() {
     return exportVertexDiffuse;
   }
 
@@ -150,7 +149,7 @@ public class U3DSaveOption extends SaveOptions {
    * @return exportVertexSpecular
   **/
   @ApiModelProperty(value = "Gets or sets whether to export vertex' specular color.")
-  public Boolean isExportVertexSpecular() {
+  public Boolean ExportVertexSpecular() {
     return exportVertexSpecular;
   }
 

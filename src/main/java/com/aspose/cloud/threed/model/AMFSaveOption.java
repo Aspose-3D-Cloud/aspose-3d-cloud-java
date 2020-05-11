@@ -14,7 +14,6 @@
 package com.aspose.cloud.threed.model;
 
 import java.util.Objects;
-import com.aspose.cloud.threed.model.FileSystem;
 import com.aspose.cloud.threed.model.SaveFormat;
 import com.aspose.cloud.threed.model.SaveOptions;
 import com.google.gson.TypeAdapter;
@@ -30,7 +29,7 @@ import java.util.List;
 /**
  * AMFSaveOption
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-08-14T15:01:31.292+08:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-09T10:19:53.827+08:00")
 public class AMFSaveOption extends SaveOptions {
   @SerializedName("EnableCompression")
   private Boolean enableCompression = null;
@@ -45,7 +44,7 @@ public class AMFSaveOption extends SaveOptions {
    * @return enableCompression
   **/
   @ApiModelProperty(value = "Whether to use compression to reduce the final file size, default value is true.")
-  public Boolean isEnableCompression() {
+  public Boolean EnableCompression() {
     return enableCompression;
   }
 

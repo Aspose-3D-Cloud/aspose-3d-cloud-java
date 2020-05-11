@@ -29,7 +29,7 @@ import java.time.OffsetDateTime;
  * File Version
  */
 @ApiModel(description = "File Version")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-08-14T15:01:31.292+08:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-09T10:19:53.827+08:00")
 public class FileVersion extends StorageFile {
   @SerializedName("VersionId")
   private String versionId = null;
@@ -65,7 +65,7 @@ public class FileVersion extends StorageFile {
    * @return isLatest
   **/
   @ApiModelProperty(required = true, value = "Specifies whether the file is (true) or is not (false) the latest version of an file.")
-  public Boolean isIsLatest() {
+  public Boolean IsLatest() {
     return isLatest;
   }
 

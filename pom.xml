@@ -2,10 +2,10 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aspose</groupId>
-  <artifactId>aspose-ThreeD-cloud</artifactId>
+  <artifactId>aspose-3d-cloud</artifactId>
   <packaging>jar</packaging>
-  <name>aspose-ThreeD-cloud</name>
-  <version>19.09</version>
+  <name>aspose-3d-cloud</name>
+  <version>20.5</version>
   <url>https://github.com/swagger-api/swagger-codegen</url>
   <description>Swagger Java</description>
   <scm>
@@ -35,6 +35,8 @@
   </developers>
 
   <build>
+    <defaultGoal>compile</defaultGoal>
+ 
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -50,6 +52,7 @@
           <argLine>-Xms512m -Xmx1500m</argLine>
           <parallel>methods</parallel>
           <forkMode>pertest</forkMode>
+          <skipTests>true</skipTests>
         </configuration>
       </plugin>
       <plugin>

@@ -14,7 +14,6 @@
 package com.aspose.cloud.threed.model;
 
 import java.util.Objects;
-import com.aspose.cloud.threed.model.FileSystem;
 import com.aspose.cloud.threed.model.SaveFormat;
 import com.aspose.cloud.threed.model.SaveOptions;
 import com.google.gson.TypeAdapter;
@@ -30,7 +29,7 @@ import java.util.List;
 /**
  * FBXSaveOption
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-08-14T15:01:31.292+08:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-09T10:19:53.827+08:00")
 public class FBXSaveOption extends SaveOptions {
   @SerializedName("EnableCompression")
   private Boolean enableCompression = null;
@@ -57,7 +56,7 @@ public class FBXSaveOption extends SaveOptions {
    * @return enableCompression
   **/
   @ApiModelProperty(value = " Compression large binary data in the FBX file, default value is true")
-  public Boolean isEnableCompression() {
+  public Boolean EnableCompression() {
     return enableCompression;
   }
 
@@ -75,7 +74,7 @@ public class FBXSaveOption extends SaveOptions {
    * @return foldRepeatedCurveData
   **/
   @ApiModelProperty(value = "Gets or sets whether reuse repeated curve data by increasing last data's ref count")
-  public Boolean isFoldRepeatedCurveData() {
+  public Boolean FoldRepeatedCurveData() {
     return foldRepeatedCurveData;
   }
 
@@ -93,7 +92,7 @@ public class FBXSaveOption extends SaveOptions {
    * @return exportLegacyMaterialProperties
   **/
   @ApiModelProperty(value = "Gets or sets whether export legacy material properties, used for back compatibility. This option is turned on by default")
-  public Boolean isExportLegacyMaterialProperties() {
+  public Boolean ExportLegacyMaterialProperties() {
     return exportLegacyMaterialProperties;
   }
 
@@ -111,7 +110,7 @@ public class FBXSaveOption extends SaveOptions {
    * @return videoForTexture
   **/
   @ApiModelProperty(value = "Gets or sets whether generate a Video instance for Aspose.ThreeD.Shading.Texture when exporting as FBX.")
-  public Boolean isVideoForTexture() {
+  public Boolean VideoForTexture() {
     return videoForTexture;
   }
 
@@ -129,7 +128,7 @@ public class FBXSaveOption extends SaveOptions {
    * @return generateVertexElementMaterial
   **/
   @ApiModelProperty(value = "Gets or sets whether always generate a Aspose.ThreeD.Entities.VertexElementMaterial for geometries if the attached node contains materials. This is turned off by default.")
-  public Boolean isGenerateVertexElementMaterial() {
+  public Boolean GenerateVertexElementMaterial() {
     return generateVertexElementMaterial;
   }
 

@@ -14,7 +14,6 @@
 package com.aspose.cloud.threed.model;
 
 import java.util.Objects;
-import com.aspose.cloud.threed.model.FileSystem;
 import com.aspose.cloud.threed.model.PdfLightingScheme;
 import com.aspose.cloud.threed.model.PdfRenderMode;
 import com.aspose.cloud.threed.model.SaveFormat;
@@ -32,7 +31,7 @@ import java.util.List;
 /**
  * PdfSaveOption
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-08-14T15:01:31.292+08:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-09T10:19:53.827+08:00")
 public class PdfSaveOption extends SaveOptions {
   @SerializedName("FlipCoordinateSystem")
   private Boolean flipCoordinateSystem = null;
@@ -53,7 +52,7 @@ public class PdfSaveOption extends SaveOptions {
    * @return flipCoordinateSystem
   **/
   @ApiModelProperty(value = "Gets or sets to flip the coordinate system of the scene during exporting.")
-  public Boolean isFlipCoordinateSystem() {
+  public Boolean FlipCoordinateSystem() {
     return flipCoordinateSystem;
   }
 

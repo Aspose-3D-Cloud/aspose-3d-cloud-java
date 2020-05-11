@@ -14,7 +14,6 @@
 package com.aspose.cloud.threed.model;
 
 import java.util.Objects;
-import com.aspose.cloud.threed.model.FileSystem;
 import com.aspose.cloud.threed.model.SaveFormat;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -30,14 +29,11 @@ import java.util.List;
 /**
  * SaveOptions
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-08-14T15:01:31.292+08:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-09T10:19:53.827+08:00")
 
 public class SaveOptions {
   @SerializedName("SaveFormat")
   private SaveFormat saveFormat = null;
-
-  @SerializedName("FileSystem")
-  private FileSystem fileSystem = null;
 
   @SerializedName("LookupPaths")
   private List<String> lookupPaths = null;
@@ -47,9 +43,6 @@ public class SaveOptions {
 
   @SerializedName("FileFormat")
   private String fileFormat = null;
-
-  @SerializedName("directory")
-  private String directory = null;
 
   public SaveOptions saveFormat(SaveFormat saveFormat) {
     this.saveFormat = saveFormat;
@@ -69,24 +62,6 @@ public class SaveOptions {
     this.saveFormat = saveFormat;
   }
 
-  public SaveOptions fileSystem(FileSystem fileSystem) {
-    this.fileSystem = fileSystem;
-    return this;
-  }
-
-   /**
-   * Allow user to handle how to manage the external dependencies during load/save.
-   * @return fileSystem
-  **/
-  @ApiModelProperty(value = "Allow user to handle how to manage the external dependencies during load/save.")
-  public FileSystem getFileSystem() {
-    return fileSystem;
-  }
-
-  public void setFileSystem(FileSystem fileSystem) {
-    this.fileSystem = fileSystem;
-  }
-
   public SaveOptions lookupPaths(List<String> lookupPaths) {
     this.lookupPaths = lookupPaths;
     return this;
@@ -94,7 +69,7 @@ public class SaveOptions {
 
   public SaveOptions addLookupPathsItem(String lookupPathsItem) {
     if (this.lookupPaths == null) {
-      this.lookupPaths = new ArrayList<String>();
+      this.lookupPaths = new ArrayList<>();
     }
     this.lookupPaths.add(lookupPathsItem);
     return this;
@@ -149,24 +124,6 @@ public class SaveOptions {
     this.fileFormat = fileFormat;
   }
 
-  public SaveOptions directory(String directory) {
-    this.directory = directory;
-    return this;
-  }
-
-   /**
-   * Only for LocalFileSystem
-   * @return directory
-  **/
-  @ApiModelProperty(value = "Only for LocalFileSystem")
-  public String getDirectory() {
-    return directory;
-  }
-
-  public void setDirectory(String directory) {
-    this.directory = directory;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -178,16 +135,14 @@ public class SaveOptions {
     }
     SaveOptions saveOptions = (SaveOptions) o;
     return Objects.equals(this.saveFormat, saveOptions.saveFormat) &&
-        Objects.equals(this.fileSystem, saveOptions.fileSystem) &&
         Objects.equals(this.lookupPaths, saveOptions.lookupPaths) &&
         Objects.equals(this.fileName, saveOptions.fileName) &&
-        Objects.equals(this.fileFormat, saveOptions.fileFormat) &&
-        Objects.equals(this.directory, saveOptions.directory);
+        Objects.equals(this.fileFormat, saveOptions.fileFormat);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(saveFormat, fileSystem, lookupPaths, fileName, fileFormat, directory);
+    return Objects.hash(saveFormat, lookupPaths, fileName, fileFormat);
   }
 
 
@@ -197,11 +152,9 @@ public class SaveOptions {
     sb.append("class SaveOptions {\n");
     
     sb.append("    saveFormat: ").append(toIndentedString(saveFormat)).append("\n");
-    sb.append("    fileSystem: ").append(toIndentedString(fileSystem)).append("\n");
     sb.append("    lookupPaths: ").append(toIndentedString(lookupPaths)).append("\n");
     sb.append("    fileName: ").append(toIndentedString(fileName)).append("\n");
     sb.append("    fileFormat: ").append(toIndentedString(fileFormat)).append("\n");
-    sb.append("    directory: ").append(toIndentedString(directory)).append("\n");
     sb.append("}");
     return sb.toString();
   }

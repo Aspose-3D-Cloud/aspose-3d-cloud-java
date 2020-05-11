@@ -30,7 +30,7 @@ import java.util.List;
  * File versions FileVersion.
  */
 @ApiModel(description = "File versions FileVersion.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-08-14T15:01:31.292+08:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-09T10:19:53.827+08:00")
 public class FileVersions {
   @SerializedName("Value")
   private List<FileVersion> value = null;
@@ -42,7 +42,7 @@ public class FileVersions {
 
   public FileVersions addValueItem(FileVersion valueItem) {
     if (this.value == null) {
-      this.value = new ArrayList<FileVersion>();
+      this.value = new ArrayList<>();
     }
     this.value.add(valueItem);
     return this;

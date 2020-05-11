@@ -26,7 +26,7 @@ import java.io.IOException;
 /**
  * Cylinder
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-08-14T15:01:31.292+08:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-09T10:19:53.827+08:00")
 public class Cylinder {
   @SerializedName("Name")
   private String name = null;
@@ -173,7 +173,7 @@ public class Cylinder {
    * @return openEnded
   **/
   @ApiModelProperty(required = true, value = "Gets or sets a value indicating whether this Aspose.ThreeD.Entities.Cylinder open ended. The default value is false.")
-  public Boolean isOpenEnded() {
+  public Boolean OpenEnded() {
     return openEnded;
   }
 
@@ -208,7 +208,7 @@ public class Cylinder {
    * Gets or sets the length of the theta. The default value is 2��.
    * @return thetaLength
   **/
-  @ApiModelProperty(required = true, value = "Gets or sets the length of the theta. The default value is 2��.")
+  @ApiModelProperty(required = true, value = "Gets or sets the length of the theta. The default value is 2p.")
   public Double getThetaLength() {
     return thetaLength;
   }

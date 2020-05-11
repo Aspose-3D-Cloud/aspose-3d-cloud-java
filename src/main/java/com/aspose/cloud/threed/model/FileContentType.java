@@ -29,9 +29,9 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(FileContentType.Adapter.class)
 public enum FileContentType {
   
-  NUMBER_0(0),
+  Binary(0),
   
-  NUMBER_1(1);
+  ASCII(1);
 
   private Integer value;
 

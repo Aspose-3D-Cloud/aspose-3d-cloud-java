@@ -29,13 +29,13 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(DracoCompressionLevel.Adapter.class)
 public enum DracoCompressionLevel {
   
-  NUMBER_0(0),
+  NoCompression(0),
   
-  NUMBER_1(1),
+  Fast(1),
   
-  NUMBER_2(2),
+  Standard(2),
   
-  NUMBER_3(3);
+  Optimal(3);
 
   private Integer value;
 

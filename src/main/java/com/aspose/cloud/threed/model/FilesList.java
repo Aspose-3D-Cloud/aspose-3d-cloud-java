@@ -30,7 +30,7 @@ import java.util.List;
  * Files list
  */
 @ApiModel(description = "Files list")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-08-14T15:01:31.292+08:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-09T10:19:53.827+08:00")
 public class FilesList {
   @SerializedName("Value")
   private List<StorageFile> value = null;
@@ -42,7 +42,7 @@ public class FilesList {
 
   public FilesList addValueItem(StorageFile valueItem) {
     if (this.value == null) {
-      this.value = new ArrayList<StorageFile>();
+      this.value = new ArrayList<>();
     }
     this.value.add(valueItem);
     return this;

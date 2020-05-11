@@ -30,7 +30,7 @@ import java.util.List;
  * File upload result
  */
 @ApiModel(description = "File upload result")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-08-14T15:01:31.292+08:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-09T10:19:53.827+08:00")
 public class FilesUploadResult {
   @SerializedName("Uploaded")
   private List<String> uploaded = null;
@@ -45,7 +45,7 @@ public class FilesUploadResult {
 
   public FilesUploadResult addUploadedItem(String uploadedItem) {
     if (this.uploaded == null) {
-      this.uploaded = new ArrayList<String>();
+      this.uploaded = new ArrayList<>();
     }
     this.uploaded.add(uploadedItem);
     return this;
@@ -71,7 +71,7 @@ public class FilesUploadResult {
 
   public FilesUploadResult addErrorsItem(Error errorsItem) {
     if (this.errors == null) {
-      this.errors = new ArrayList<Error>();
+      this.errors = new ArrayList<>();
     }
     this.errors.add(errorsItem);
     return this;

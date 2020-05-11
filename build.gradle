@@ -2,7 +2,7 @@ apply plugin: 'idea'
 apply plugin: 'eclipse'
 
 group = 'com.aspose'
-version = '19.09'
+version = '20.5'
 
 buildscript {
     repositories {
@@ -83,7 +83,7 @@ if(hasProperty('target') && target == 'android') {
 
     install {
         repositories.mavenInstaller {
-            pom.artifactId = 'aspose-ThreeD-cloud'
+            pom.artifactId = 'aspose-3d-cloud'
         }
     }
 

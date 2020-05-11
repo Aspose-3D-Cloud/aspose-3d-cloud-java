@@ -141,7 +141,7 @@ public class ApiClient {
      */
     public ApiClient() {
         httpClient = new OkHttpClient();
-        
+
         /********added for fiddle
         //error!!   
         //httpClient.setProxy(new Proxy(Proxy.Type.HTTP,new InetSocketAddress("127.0.0.1", 8888)));       
@@ -149,6 +149,7 @@ public class ApiClient {
         *********added for fiddle end
         */
         verifyingSsl = true;
+
         json = new JSON(this);
 
         /*
@@ -165,7 +166,7 @@ public class ApiClient {
         this.lenientDatetimeFormat = true;
 
         // Set default User-Agent.
-        setUserAgent("Swagger-Codegen/19.09/java");
+        setUserAgent("Swagger-Codegen/20.5/java");
 
         // Setup authentications (key: authentication name, value: authentication).
         authentications = new HashMap<String, Authentication>();
@@ -186,7 +187,7 @@ public class ApiClient {
     /**
      * Set base path
      *
-     * @param basePath Base path of the URL (e.g https://localhost:44327/v3.0
+     * @param basePath Base path of the URL (e.g https://api.aspose.cloud/v3.0
      * @return An instance of OkHttpClient
      */
     public ApiClient setBasePath(String basePath) {

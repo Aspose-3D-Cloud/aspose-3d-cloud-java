@@ -53,7 +53,7 @@ Add this dependency to your project's POM:
     <dependency>
         <groupId>com.aspose</groupId>
         <artifactId>aspose-3d-cloud</artifactId>
-        <version>19.11</version>
+        <version>20.5</version>
     </dependency>
 </dependencies>
 ```

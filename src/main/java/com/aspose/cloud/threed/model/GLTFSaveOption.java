@@ -15,7 +15,6 @@ package com.aspose.cloud.threed.model;
 
 import java.util.Objects;
 import com.aspose.cloud.threed.model.FileContentType;
-import com.aspose.cloud.threed.model.FileSystem;
 import com.aspose.cloud.threed.model.SaveFormat;
 import com.aspose.cloud.threed.model.SaveOptions;
 import com.google.gson.TypeAdapter;
@@ -31,7 +30,7 @@ import java.util.List;
 /**
  * GLTFSaveOption
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-08-14T15:01:31.292+08:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-09T10:19:53.827+08:00")
 public class GLTFSaveOption extends SaveOptions {
   @SerializedName("PrettyPrint")
   private Boolean prettyPrint = null;
@@ -67,7 +66,7 @@ public class GLTFSaveOption extends SaveOptions {
    * @return prettyPrint
   **/
   @ApiModelProperty(value = "The JSON content of GLTF file is indented for human reading, default value is false.")
-  public Boolean isPrettyPrint() {
+  public Boolean PrettyPrint() {
     return prettyPrint;
   }
 
@@ -85,7 +84,7 @@ public class GLTFSaveOption extends SaveOptions {
    * @return embedAssets
   **/
   @ApiModelProperty(value = "Embed all external assets as base64 into single file in ASCII mode, default value is false.")
-  public Boolean isEmbedAssets() {
+  public Boolean EmbedAssets() {
     return embedAssets;
   }
 
@@ -103,7 +102,7 @@ public class GLTFSaveOption extends SaveOptions {
    * @return useCommonMaterials
   **/
   @ApiModelProperty(value = "Serialize materials using KHR common material extensions, default value is false. Set this to false will cause Aspose.3D export a set of vertex/fragment shader if Aspose.ThreeD.Formats.GLTFSaveOptions.ExportShaders")
-  public Boolean isUseCommonMaterials() {
+  public Boolean UseCommonMaterials() {
     return useCommonMaterials;
   }
 
@@ -121,7 +120,7 @@ public class GLTFSaveOption extends SaveOptions {
    * @return flipTexCoordV
   **/
   @ApiModelProperty(value = "Flip texture coordinate v(t) component, default value is true.")
-  public Boolean isFlipTexCoordV() {
+  public Boolean FlipTexCoordV() {
     return flipTexCoordV;
   }
 
@@ -139,7 +138,7 @@ public class GLTFSaveOption extends SaveOptions {
    * @return bufferFile
   **/
   @ApiModelProperty(value = "The file name of the external buffer file used to store binary data. If this file is not specified, Aspose.3D will generate a name for you. This is ignored when export glTF in binary mode.")
-  public Boolean isBufferFile() {
+  public Boolean BufferFile() {
     return bufferFile;
   }
 
@@ -157,7 +156,7 @@ public class GLTFSaveOption extends SaveOptions {
    * @return saveExtras
   **/
   @ApiModelProperty(value = "Save scene object's dynamic properties into 'extra' fields in the generated glTF file. This is useful to provide application-specific data. Default value is false..")
-  public Boolean isSaveExtras() {
+  public Boolean SaveExtras() {
     return saveExtras;
   }
 
@@ -175,7 +174,7 @@ public class GLTFSaveOption extends SaveOptions {
    * @return dracoCompression
   **/
   @ApiModelProperty(value = "Gets or sets whether to enable draco compression.")
-  public Boolean isDracoCompression() {
+  public Boolean DracoCompression() {
     return dracoCompression;
   }
 

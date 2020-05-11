@@ -14,7 +14,6 @@
 package com.aspose.cloud.threed.model;
 
 import java.util.Objects;
-import com.aspose.cloud.threed.model.FileSystem;
 import com.aspose.cloud.threed.model.SaveFormat;
 import com.aspose.cloud.threed.model.SaveOptions;
 import com.google.gson.TypeAdapter;
@@ -30,7 +29,7 @@ import java.util.List;
 /**
  * ObjSaveOption
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-08-14T15:01:31.292+08:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-09T10:19:53.827+08:00")
 public class ObjSaveOption extends SaveOptions {
   @SerializedName("Verbose")
   private Boolean verbose = null;
@@ -54,7 +53,7 @@ public class ObjSaveOption extends SaveOptions {
    * @return verbose
   **/
   @ApiModelProperty(value = "Gets or sets whether generate comments for each section.")
-  public Boolean isVerbose() {
+  public Boolean Verbose() {
     return verbose;
   }
 
@@ -72,7 +71,7 @@ public class ObjSaveOption extends SaveOptions {
    * @return serializeW
   **/
   @ApiModelProperty(value = "Gets or sets whether serialize W component in model's vertex position.")
-  public Boolean isSerializeW() {
+  public Boolean SerializeW() {
     return serializeW;
   }
 
@@ -90,7 +89,7 @@ public class ObjSaveOption extends SaveOptions {
    * @return enableMaterials
   **/
   @ApiModelProperty(value = "Gets or sets whether import/export materials for each object.")
-  public Boolean isEnableMaterials() {
+  public Boolean EnableMaterials() {
     return enableMaterials;
   }
 
@@ -108,7 +107,7 @@ public class ObjSaveOption extends SaveOptions {
    * @return flipCoordinateSystem
   **/
   @ApiModelProperty(value = "Gets or sets whether flip coordinate system of control points/normal during importing/exporting.")
-  public Boolean isFlipCoordinateSystem() {
+  public Boolean FlipCoordinateSystem() {
     return flipCoordinateSystem;
   }
 

@@ -28,7 +28,7 @@ import java.io.IOException;
  * A transform contains information that allow access to object&#39;s translate/scale/rotation or transform matrix at minimum cost This is used by local transform.             
  */
 @ApiModel(description = "A transform contains information that allow access to object's translate/scale/rotation or transform matrix at minimum cost This is used by local transform.             ")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-08-14T15:01:31.292+08:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-05-09T10:19:53.827+08:00")
 public class Transform {
   @SerializedName("Translation")
   private Vector3 translation = null;

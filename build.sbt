@@ -1,8 +1,8 @@
 lazy val root = (project in file(".")).
   settings(
     organization := "com.aspose",
-    name := "aspose-ThreeD-cloud",
-    version := "19.09",
+    name := "aspose-3d-cloud",
+    version := "20.5",
     scalaVersion := "2.11.4",
     scalacOptions ++= Seq("-feature"),
     javacOptions in compile ++= Seq("-Xlint:deprecation"),

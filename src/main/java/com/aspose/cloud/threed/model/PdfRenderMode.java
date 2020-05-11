@@ -29,35 +29,35 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(PdfRenderMode.Adapter.class)
 public enum PdfRenderMode {
   
-  NUMBER_0(0),
+  Solid(0),
   
-  NUMBER_1(1),
+  SolidWireframe(1),
   
-  NUMBER_2(2),
+  Transparent(2),
   
-  NUMBER_3(3),
+  TransparentWireframe(3),
   
-  NUMBER_4(4),
+  BoundingBox(4),
   
-  NUMBER_5(5),
+  TransparentBoundingBox(5),
   
-  NUMBER_6(6),
+  TransparentBoundingBoxOutline(6),
   
-  NUMBER_7(7),
+  Wireframe(7),
   
-  NUMBER_8(8),
+  ShadedWireframe(8),
   
-  NUMBER_9(9),
+  HiddenWireframe(9),
   
-  NUMBER_10(10),
+  Vertices(10),
   
-  NUMBER_11(11),
+  ShadedVertices(11),
   
-  NUMBER_12(12),
+  Illustration(12),
   
-  NUMBER_13(13),
+  SolidOutline(13),
   
-  NUMBER_14(14);
+  ShadedIllustration(14);
 
   private Integer value;
 

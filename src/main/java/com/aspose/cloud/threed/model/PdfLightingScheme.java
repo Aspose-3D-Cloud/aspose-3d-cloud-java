@@ -29,29 +29,29 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(PdfLightingScheme.Adapter.class)
 public enum PdfLightingScheme {
   
-  NUMBER_0(0),
+  Artwork(0),
   
-  NUMBER_1(1),
+  None(1),
   
-  NUMBER_2(2),
+  White(2),
   
-  NUMBER_3(3),
+  Day(3),
   
-  NUMBER_4(4),
+  Night(4),
   
-  NUMBER_5(5),
+  Hard(5),
   
-  NUMBER_6(6),
+  Primary(6),
   
-  NUMBER_7(7),
+  Blue(7),
   
-  NUMBER_8(8),
+  Red(8),
   
-  NUMBER_9(9),
+  Cube(9),
   
-  NUMBER_10(10),
+  CAD(10),
   
-  NUMBER_11(11);
+  Headlamp(11);
 
   private Integer value;
 

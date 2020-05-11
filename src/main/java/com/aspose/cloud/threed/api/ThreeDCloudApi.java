@@ -55,6 +55,32 @@ public class ThreeDCloudApi {
         this.apiClient = apiClient;
     }
 
+    //***********************added by manually
+    private static String accesstoken;
+	public static String GetAccessToken(String grantType, String appSID, String appKey) {
+		try {
+			if (accesstoken == null || accesstoken == "") {
+				ApiClient apiClient = new ApiClient();
+				apiClient.setBasePath("https://api.aspose.cloud");
+				ThreeDCloudApi oauth2 = new ThreeDCloudApi();
+				oauth2.setApiClient(apiClient);
+				AccessTokenResponse accessTokenResponse = oauth2.oAuthPost(grantType, appSID, appKey);
+				accesstoken = accessTokenResponse.getAccessToken();
+			}
+		} catch (ApiException e) {
+			e.printStackTrace();
+		}
+		return accesstoken;
+	}
+	
+	public ThreeDCloudApi(String grantType, String appSID, String appKey) throws ApiException {
+		//ThreeDCloudApi apiTask = new ThreeDCloudApi();
+		ApiClient apiClient = new ApiClient();
+		apiClient.setBasePath("https://api.aspose.cloud/v3.0");
+		apiClient.addDefaultHeader("Authorization", "Bearer " + GetAccessToken(grantType,appSID,appKey));
+		this.setApiClient(apiClient);		
+	}	
+	//add by manually end*****************************
     public ApiClient getApiClient() {
         return apiClient;
     }
@@ -2555,7 +2581,7 @@ public class ThreeDCloudApi {
     }
 
     /**
-     * Parametric Modeling�� Create a Entity with size and located in ...
+     * Parametric Modeling, Create a Entity with size and located in ...
      * 
      * @param name The name of the source file. (required)
      * @param modeldata ModelData struct. (required)
@@ -2571,7 +2597,7 @@ public class ThreeDCloudApi {
     }
 
     /**
-     * Parametric Modeling�� Create a Entity with size and located in ...
+     * Parametric Modeling, Create a Entity with size and located in ...
      * 
      * @param name The name of the source file. (required)
      * @param modeldata ModelData struct. (required)
@@ -2588,7 +2614,7 @@ public class ThreeDCloudApi {
     }
 
     /**
-     * Parametric Modeling�� Create a Entity with size and located in ... (asynchronously)
+     * Parametric Modeling, Create a Entity with size and located in ... (asynchronously)
      * 
      * @param name The name of the source file. (required)
      * @param modeldata ModelData struct. (required)
@@ -3417,6 +3443,178 @@ public class ThreeDCloudApi {
         }
 
         com.squareup.okhttp.Call call = postTriangulateOriginalValidateBeforeCall(name, folder, storage, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<File>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for postTriangulatePart
+     * @param name The file&#39;s mame (required)
+     * @param objectaddressingpath The node or mesh getted by OAP. (required)
+     * @param newfilename The new file&#39;s mame (required)
+     * @param newformat The new file&#39;s format (required)
+     * @param folder The folder for source file (optional)
+     * @param storage The storage type (optional)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call postTriangulatePartCall(String name, String objectaddressingpath, String newfilename, String newformat, String folder, String storage, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+        
+        // create path and map variables
+        String localVarPath = "/3d/triangulate/part";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        if (name != null)
+        localVarQueryParams.addAll(apiClient.parameterToPairs("", "name", name));
+        if (objectaddressingpath != null)
+        localVarQueryParams.addAll(apiClient.parameterToPairs("", "objectaddressingpath", objectaddressingpath));
+        if (newfilename != null)
+        localVarQueryParams.addAll(apiClient.parameterToPairs("", "newfilename", newfilename));
+        if (newformat != null)
+        localVarQueryParams.addAll(apiClient.parameterToPairs("", "newformat", newformat));
+        if (folder != null)
+        localVarQueryParams.addAll(apiClient.parameterToPairs("", "folder", folder));
+        if (storage != null)
+        localVarQueryParams.addAll(apiClient.parameterToPairs("", "storage", storage));
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "JWT" };
+        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+    
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call postTriangulatePartValidateBeforeCall(String name, String objectaddressingpath, String newfilename, String newformat, String folder, String storage, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'name' is set
+        if (name == null) {
+            throw new ApiException("Missing the required parameter 'name' when calling postTriangulatePart(Async)");
+        }
+        
+        // verify the required parameter 'objectaddressingpath' is set
+        if (objectaddressingpath == null) {
+            throw new ApiException("Missing the required parameter 'objectaddressingpath' when calling postTriangulatePart(Async)");
+        }
+        
+        // verify the required parameter 'newfilename' is set
+        if (newfilename == null) {
+            throw new ApiException("Missing the required parameter 'newfilename' when calling postTriangulatePart(Async)");
+        }
+        
+        // verify the required parameter 'newformat' is set
+        if (newformat == null) {
+            throw new ApiException("Missing the required parameter 'newformat' when calling postTriangulatePart(Async)");
+        }
+        
+        
+        com.squareup.okhttp.Call call = postTriangulatePartCall(name, objectaddressingpath, newfilename, newformat, folder, storage, progressListener, progressRequestListener);
+        return call;
+
+        
+        
+        
+        
+    }
+
+    /**
+     * Triangulate part of the scene(Specified by OAP) and save the scene to different file 
+     * 
+     * @param name The file&#39;s mame (required)
+     * @param objectaddressingpath The node or mesh getted by OAP. (required)
+     * @param newfilename The new file&#39;s mame (required)
+     * @param newformat The new file&#39;s format (required)
+     * @param folder The folder for source file (optional)
+     * @param storage The storage type (optional)
+     * @return File
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public File postTriangulatePart(String name, String objectaddressingpath, String newfilename, String newformat, String folder, String storage) throws ApiException {
+        ApiResponse<File> resp = postTriangulatePartWithHttpInfo(name, objectaddressingpath, newfilename, newformat, folder, storage);
+        return resp.getData();
+    }
+
+    /**
+     * Triangulate part of the scene(Specified by OAP) and save the scene to different file 
+     * 
+     * @param name The file&#39;s mame (required)
+     * @param objectaddressingpath The node or mesh getted by OAP. (required)
+     * @param newfilename The new file&#39;s mame (required)
+     * @param newformat The new file&#39;s format (required)
+     * @param folder The folder for source file (optional)
+     * @param storage The storage type (optional)
+     * @return ApiResponse&lt;File&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<File> postTriangulatePartWithHttpInfo(String name, String objectaddressingpath, String newfilename, String newformat, String folder, String storage) throws ApiException {
+        com.squareup.okhttp.Call call = postTriangulatePartValidateBeforeCall(name, objectaddressingpath, newfilename, newformat, folder, storage, null, null);
+        Type localVarReturnType = new TypeToken<File>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Triangulate part of the scene(Specified by OAP) and save the scene to different file  (asynchronously)
+     * 
+     * @param name The file&#39;s mame (required)
+     * @param objectaddressingpath The node or mesh getted by OAP. (required)
+     * @param newfilename The new file&#39;s mame (required)
+     * @param newformat The new file&#39;s format (required)
+     * @param folder The folder for source file (optional)
+     * @param storage The storage type (optional)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call postTriangulatePartAsync(String name, String objectaddressingpath, String newfilename, String newformat, String folder, String storage, final ApiCallback<File> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = postTriangulatePartValidateBeforeCall(name, objectaddressingpath, newfilename, newformat, folder, storage, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<File>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
