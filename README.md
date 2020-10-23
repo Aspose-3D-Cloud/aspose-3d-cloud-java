@@ -1,44 +1,35 @@
-[Aspose.3D Cloud](https://products.aspose.cloud/3D) contains Aspose.3D Cloud SDK for Java source code. This SDK allows you to work with Aspose.3D Cloud REST APIs in your java applications quickly and easily.
+![](https://img.shields.io/badge/REST%20API-v3.0-lightgrey) [![GitHub license](https://img.shields.io/github/license/aspose-3d-cloud/aspose-3d-cloud-java)](https://github.com/aspose-3d-cloud/aspose-3d-cloud-java/blob/master/LICENSE) ![GitHub last commit](https://img.shields.io/github/last-commit/Aspose-3D-Cloud/aspose-3d-cloud-java)
 
-To use this SDK, you will need App SID and App Key which can be looked up at [Aspose Cloud Dashboard](https://dashboard.aspose.cloud/#/apps) (free registration in Aspose Cloud is required for this).
+# Java SDK for 3D File Formats
 
+Java SDK wraps Aspose.3D Cloud APIs so you could create, edit and convert 3D files in your cloud-based Java applications with zero initial cost.
 
-# Key Features
+## Process 3D Objects & Files in the Cloud
 
-- Conversion between various document-related formats (10+ formats supported)
+- [Convert between 3D formats](https://docs.aspose.cloud/3d/converting-between-formats-using-aspose-3d-cloud/) without requring any additional tools or rendering software.
+- Modeling and data processing, including parametric modeling and object deletion from scene.
+- Utilities such as extract 3D contens from PDF file and triangulate meshes.
 
-- Modeling and Data Processing,including parametric modeling and delete object from scene 
+## Read & Write 3D Formats
 
-- Utilities,including extract 3D contens from PDF file and triangulate meshes 
+AMF, 3DS, RVM, DRC, DAE, DXF, FBX, OBJ, PDF, PLY, STL, U3D, GLTF, HTML
 
+## Read-Only Formats
 
+JT, X (DirectX), 3MF, ASE
 
-See [API Reference](https://apireference.aspose.cloud/3d/) for full API specification.
-
-
-
-# File,folder and storage API support
-
+## Integrated Storage API
 
 It gives you an ability to:
 
-- Upload, download, copy, move and delete files, including versions handling (if you are using Cloud storage that supports this feature - true by default)
-- Create, copy, move and delete folders
-- Copy and move files and folders accross separate storages in scope of a single operation
-- Check if certain file, folder or storage exists
+- Upload, download, copy, move and delete files, including versions handling (if you are using Cloud storage that supports this feature - true by default).
+- Create, copy, move and delete folders.
+- Copy and move files and folders accross separate storages in scope of a single operation.
+- Check if certain file, folder or storage exists.
 
-# Licensing
+## Get Started with Aspose.3D Cloud SDK for Java
 
-All Aspose.3D Cloud SDKs are licensed under [MIT License](https://github.com/aspose-3d-cloud/aspose-3d-cloud-java/blob/master/LICENSE).
-
-# How to use the SDK?
-
-## Installation & Usage
-
- 
-
-Add this dependency to your project's POM:
-
+Register an account at [Aspose Cloud Dashboard](https://dashboard.aspose.cloud/#/apps) to get you application information. Next, add the following dependency to your project's POM to automatically fetch the required artifacts.
 
 ```
 <repositories>
@@ -48,7 +39,8 @@ Add this dependency to your project's POM:
         <url>https://repository.aspose.cloud/repo/</url>
     </repository>
 </repositories>
-
+```
+```
 <dependencies>
     <dependency>
         <groupId>com.aspose</groupId>
@@ -58,49 +50,24 @@ Add this dependency to your project's POM:
 </dependencies>
 ```
 
-## Getting Started
+## Extract Scene from a 3D File
 
- 
-
-```
-import com.aspose.cloud.threed.api.ThreeDCloudApi;
-import com.aspose.cloud.threed.client.ApiException;
-import com.aspose.cloud.threed.client.ApiResponse;
-
-public class App 
-{
-	private static String grantType = "client_credentials"; 
-	private static String clientId = "****yourAppid****";
-	private static String clientSecret = "****yourAppKey****";
-	public static void main( String[] args ) throws ApiException
-	{
-		ThreeDCloudApi threeDCloudApi = new ThreeDCloudApi(grantType,clientId,clientSecret);
-		String srcPath = "3DTest\\Aspose.pdf";
-		String destPath = "3DTest\\Aspose.java.pdf";
-		String srcStorageName = null;
-		String destStorageName = null;
-		String versionId = null;
-		ApiResponse<Void> response = threeDCloudApi.copyFileWithHttpInfo(srcPath, destPath, srcStorageName, destStorageName, versionId);
-		```
-	}
-}
+```java
+const string name = "extracttest.pdf";
+const string multifileprefix = "newScene";
+const string newformat = "pdf";
+const string password = null;
+const string folder = "3DTest";
+string storage = null;
+var response = threeDCloudApi.PostSceneToFileWithHttpInfo(name, multifileprefix, newformat, password, folder, storage);
+Console.WriteLine(response);
 ```
 
-[Tests](https://github.com/Aspose-3D-Cloud/aspose-3D-cloud-java/tree/master/src/test/java/com/aspose/cloud/threed/api) contain various examples of using the SDK.
+## Aspose.3D Cloud SDKs in Popular Languages
 
+| .NET | PHP | Python | Ruby | Node.js | Swift | Perl | GO |
+|---|---|---|---|---|---|---|---|
+| [GitHub](https://github.com/aspose-3d-cloud/aspose-3d-cloud-dotnet) | [GitHub](https://github.com/Aspose-3D-Cloud/aspose-3d-cloud-php) | [GitHub](https://github.com/Aspose-3D-Cloud/aspose-3d-cloud-python) | [GitHub](https://github.com/Aspose-3D-Cloud/aspose-3d-cloud-ruby)  | [GitHub](https://github.com/Aspose-3D-Cloud/aspose-3d-cloud-node) | [GitHub](https://github.com/aspose-3d-cloud/aspose-3d-cloud-swift) | [GitHub](https://github.com/Aspose-3D-Cloud/aspose-3d-cloud-perl) | [GitHub](https://github.com/Aspose-3D-Cloud/aspose-3d-cloud-go) |
+| [NuGet](https://www.nuget.org/packages/Aspose.3D-Cloud/) | [Composer](https://packagist.org/packages/aspose/3d-sdk-php) | [PIP](https://pypi.org/project/aspose3dcloud/) | [GEM](https://rubygems.org/gems/aspose_3d_cloud)  | [NPM](https://www.npmjs.com/package/aspose3dcloud) | [POD](https://cocoapods.org/pods/Aspose3DCloud) |  [CPAN](https://metacpan.org/release/AsposeThreeDCloud-ThreeDCloudApi) | [GO](https://pkg.go.dev/github.com/Aspose-3D-Cloud/aspose-3d-cloud-go/v20?tab=overview) |
 
-
-# Contact Us
-
-Your feedback is very important to us. Please feel free to contact via
-
-- [**Free Support Forum**](https://forum.aspose.cloud/c/3d)
-- [**Paid Support Helpdesk**](https://helpdesk.aspose.cloud/)
-
-# Resources
-
-- [**Web API reference**](https://apireference.aspose.cloud/3d/)
-- [**Website**](https://www.aspose.cloud)
-- [**Product Home**](https://products.aspose.cloud/3d)
-- [**Documentation**](https://docs.aspose.cloud/3d/)
-- [**Blog**](https://blog.aspose.cloud/category/3d/)
+[Home](https://www.aspose.cloud) | [Product Page](https://products.aspose.cloud/3d/java) | [Documentation](https://docs.aspose.cloud/3d/) | [Live Demo](https://products.aspose.app/3d/family) | [API Reference](https://apireference.aspose.cloud/3d/) | [Code Samples](https://github.com/Aspose-3D-Cloud/aspose-3D-cloud-java/tree/master/src/test/java/com/aspose/cloud/threed/api) | [Blog](https://blog.aspose.cloud/category/3d/) | [Free Support](https://forum.aspose.cloud/c/3d) | [Free Trial](https://dashboard.aspose.cloud/#/apps)
