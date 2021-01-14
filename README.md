@@ -27,6 +27,11 @@ It gives you an ability to:
 - Copy and move files and folders accross separate storages in scope of a single operation.
 - Check if certain file, folder or storage exists.
 
+## Enhancements Version 20.5
+- Added support to read/write more file formats.
+- Added support for HTML file format conversion.
+- New feature added to Triangulate part of the scene (Specified by OAP) and save the scene to a different file.
+
 ## Get Started with Aspose.3D Cloud SDK for Java
 
 Register an account at [Aspose Cloud Dashboard](https://dashboard.aspose.cloud/#/apps) to get you application information. Next, add the following dependency to your project's POM to automatically fetch the required artifacts.
