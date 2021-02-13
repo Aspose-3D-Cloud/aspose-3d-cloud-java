@@ -55,17 +55,22 @@ Register an account at [Aspose Cloud Dashboard](https://dashboard.aspose.cloud/#
 </dependencies>
 ```
 
-## Extract Scene from a 3D File
+## 3D to PDF Conversion in Java
 
 ```java
-const string name = "extracttest.pdf";
-const string multifileprefix = "newScene";
-const string newformat = "pdf";
-const string password = null;
-const string folder = "3DTest";
-string storage = null;
-var response = threeDCloudApi.PostSceneToFileWithHttpInfo(name, multifileprefix, newformat, password, folder, storage);
-Console.WriteLine(response);
+	// Get your ClientId and ClientSecret from https://dashboard.aspose.cloud (free registration required).
+	
+	ThreeDCloudApi threeDCloudApi  = new ThreeDCloudApi("client_credentials", "MY_CLIENT_ID", "MY_CLIENT_SECRET");
+
+	const string name = "sample.3d";
+	const string multifileprefix = "newScene";
+	const string newformat = "pdf";
+	const string password = null;
+	const string folder = "3DTest";
+	string storage = "My_Storage_Name";
+
+	var response = threeDCloudApi.PostSceneToFileWithHttpInfo(name, multifileprefix, newformat, password, folder, storage);
+	Console.WriteLine(response);
 ```
 
 ## Aspose.3D Cloud SDKs in Popular Languages
